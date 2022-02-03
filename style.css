@@ -1,0 +1,64 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Montserrat;
+  background: #6040b0;
+}
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  background: #4b34a2;
+  max-width: 400px;
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 25px;
+}
+
+.breadcrumbs__col {
+  margin-right: 27px;
+  position: relative;
+}
+
+.breadcrumbs__col:after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background-image: url(arrow.svg);
+  background-repeat: no-repeat;
+  top: 60%;
+  right: -20px;
+  transform: translateY(-50%);
+}
+
+.breadcrumbs__col:last-child:after {
+  display: none;
+}
+
+.breadcrumbs__item {
+  display: inline-flex;
+  font-weight: 500;
+  font-size: 14px;
+  color: #ccc;
+  text-decoration: none;
+}
+
+.breadcrumbs__col:last-child .breadcrumbs__item {
+  color: #fff;
+}
+
+.breadcrumbs__col:not(:last-child) .breadcrumbs__item:hover {
+  text-decoration: underline;
+}
